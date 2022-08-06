@@ -30,7 +30,17 @@
     "vite": "^3.0.0",
     "vue-tsc": "^0.38.4"
   },
+	"husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+	
   "lint-staged": {
-    "*.{ts,tsx,vue,js,jsx}": "eslint --cache --fix"
+    "*.{ts,tsx,vue,js,jsx}": [
+			"pnpm lint",
+      "prettier --write",
+      "git add"
+		]
   }
 }
