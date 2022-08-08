@@ -4,7 +4,7 @@
     <!-- <button @click="gotoFoo">点击跳转</button> -->
     <router-link to="/foo" style="margin-right: 20px">foo</router-link>
     <router-link to="/">首页</router-link>
-    <router-view :key="+new Date()"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 <script lang="ts" setup>
