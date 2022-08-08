@@ -10,4 +10,12 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  css: {
+    preprocessorOptions: {
+      // 全局引入样式
+      scss: {
+        additionalData: '@import "@/assets/style/main.scss";',
+      },
+    },
+  },
 });
