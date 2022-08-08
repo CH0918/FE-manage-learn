@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-		"build:dev": "vite build --mode development",
+    "build:dev": "vite build --mode development",
     "build": "vue-tsc --noEmit --skipLibCheck && vite build --mode production",
     "preview": "vite preview",
     "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
@@ -23,6 +23,7 @@
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
+    "@unocss/preset-uno": "^0.45.5",
     "@vitejs/plugin-vue": "^3.0.0",
     "dart-sass": "^1.25.0",
     "eslint": "^8.21.0",
@@ -35,6 +36,7 @@
     "prettier": "^2.7.1",
     "sass": "^1.54.3",
     "typescript": "^4.6.4",
+    "unocss": "^0.45.5",
     "vite": "^3.0.0",
     "vue-tsc": "^0.38.4"
   },

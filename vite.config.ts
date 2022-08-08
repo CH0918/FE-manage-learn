@@ -1,9 +1,20 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
+import Unocss from 'unocss/vite';
+import presetUno from '@unocss/preset-uno';
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    Unocss({
+      presets: [presetUno()],
+      rules: [
+        ['p-10', { padding: '10px' }],
+        ['border-1', { border: '1px solid #ccc' }],
+      ],
+    }),
+  ],
   resolve: {
     // 设置别名
     alias: {
