@@ -1,11 +1,11 @@
 <template>
   <div>这是foo页面</div>
+  <div>foo store: {{ store.count }}</div>
 </template>
-<script>
-export default {
-  name: 'Foo',
-};
+
+<script setup lang="ts">
+import { useStore } from '@/store/index';
+const store = useStore();
 </script>
-<script setup lang="ts"></script>
 
 <style lang="scss" scoped></style>

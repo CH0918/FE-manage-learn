@@ -21,9 +21,9 @@ const routes: RouteRecordRaw[] = [
   },
 ];
 const router = createRouter({ history: createWebHistory(), routes });
-router.beforeEach((to, from) => {
-  if (to.meta.title) {
-    document.title = to.meta.title;
-  }
-});
+// router.beforeEach((to, from) => {
+// if (to.meta.title) {
+//   document.title = to.meta.title;
+// }
+// });
 export default router;
