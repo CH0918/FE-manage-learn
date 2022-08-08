@@ -28,6 +28,7 @@ const updateCount = () => {
     count: 222,
   });
 };
+console.log('env = ', import.meta.env);
 // const gotoFoo = () => {
 //   router.push({
 //     path: 'foo',
