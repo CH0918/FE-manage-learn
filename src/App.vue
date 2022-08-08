@@ -9,6 +9,13 @@
 </template>
 <script lang="ts" setup>
 import { useRouter } from 'vue-router';
+import loginApi from '@/service/api/login';
+const login = async () => {
+  const res = await loginApi.login({ userName: 'admin', password: 'admin' });
+  if (res.code === 1) {
+    // do something
+  }
+};
 const router = useRouter();
 
 const gotoFoo = () => {
