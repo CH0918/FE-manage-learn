@@ -1,19 +1,40 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
+// 自动导入
+import Components from 'unplugin-vue-components/vite';
+// 自动导入vant
+import { VantResolver } from 'unplugin-vue-components/resolvers';
+// 原子化css
 import Unocss from 'unocss/vite';
+// 原子化预设，包含tailwindcss widicss 等预设
 import presetUno from '@unocss/preset-uno';
+// css样式不用写class
+import presetAttributify from '@unocss/preset-attributify';
+// icon
+import ICons from 'unplugin-icons/vite';
+import IconsResolver from 'unplugin-icons/resolver';
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     Unocss({
-      presets: [presetUno()],
+      presets: [
+        presetUno(),
+        presetAttributify({
+          /* options */
+        }),
+      ],
       rules: [
         ['p-10', { padding: '10px' }],
         ['border-1', { border: '1px solid #ccc' }],
       ],
     }),
+    Components({
+      resolvers: [VantResolver(), IconsResolver()],
+    }),
+    ICons(),
   ],
   resolve: {
     // 设置别名

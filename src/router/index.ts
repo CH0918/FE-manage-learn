@@ -1,23 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import home from '@/views/home.vue';
+import loginIndex from '@/views/login/loginIndex.vue';
 import type { RouteRecordRaw } from 'vue-router';
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'home',
-    component: home,
-    meta: {
-      title: '首页',
-    },
-  },
-  {
-    path: '/foo',
-    name: 'foo',
-    meta: {
-      title: 'this is foo',
-    },
-    component: () => import('@/views/foo.vue'),
+    name: 'loginIndex',
+    component: loginIndex,
+    // meta: {
+    //   title: '首页',
+    // },
   },
 ];
 const router = createRouter({ history: createWebHistory(), routes });

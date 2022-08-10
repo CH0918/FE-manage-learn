@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "build:dev": "vite build --mode development",
     "build": "vue-tsc --noEmit --skipLibCheck && vite build --mode production",
     "preview": "vite preview",
@@ -13,19 +13,24 @@
   },
   "dependencies": {
     "@types/node": "^18.6.3",
+    "@unocss/reset": "^0.45.5",
     "axios": "^0.27.2",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.17",
+    "vant": "^3.5.4",
+    "vconsole": "^3.14.6",
     "vue": "^3.2.37",
-    "vue-router": "4"
+    "vue-router": "4",
+    "vue-vconsole-devtools": "^1.0.5"
   },
   "devDependencies": {
+    "@iconify/json": "^2.1.89",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
+    "@unocss/preset-attributify": "^0.45.5",
     "@unocss/preset-uno": "^0.45.5",
     "@vitejs/plugin-vue": "^3.0.0",
-    "dart-sass": "^1.25.0",
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -37,6 +42,8 @@
     "sass": "^1.54.3",
     "typescript": "^4.6.4",
     "unocss": "^0.45.5",
+    "unplugin-icons": "^0.14.8",
+    "unplugin-vue-components": "^0.22.1",
     "vite": "^3.0.0",
     "vue-tsc": "^0.38.4"
   },
